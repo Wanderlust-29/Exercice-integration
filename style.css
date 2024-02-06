@@ -1,0 +1,147 @@
+html {
+    font-size : 14px;
+    overflow-x:hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows : 10vh 200vh 10vh;
+    font-family: monospace;
+}
+
+body > header {
+    background-color : #0077b6;
+    display: grid;
+    grid-template-columns : 1fr 3fr;
+    padding: 0 1rem;
+}
+
+body > header > h1 {
+    color : white;
+    align-self:center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+body > header > nav > ul {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    list-style:none;
+    height : 100%;
+    margin:0;
+    padding:0;
+}
+
+body > header > nav > ul > li {
+    align-self:center;
+}
+
+body > header > nav > ul > li a {
+    color:white;
+    text-decoration: none;
+}
+
+body > footer {
+    background-color : #03045e;
+}
+
+body > main {
+    display:grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+body > main > section:first-of-type {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+body > main > section:first-of-type h2{
+    grid-column: 1 / 2;
+    padding-left:3rem;
+    align-self:end;
+    font-size: 3.5rem;
+}
+
+body > main > section:first-of-type h3{
+    grid-column: 1 / 2;
+    padding-left:3rem;
+    font-size: 2rem;
+}
+
+body > main > section:first-of-type figure{
+    grid-column: 2 / 3;
+    grid-row : 1 / 3;
+    width:100%;
+    padding:0;
+    margin:0;
+}
+
+body > main > section:first-of-type img{
+    width:100%;
+}
+
+
+/* la deuxième section du main */
+body > main > section:nth-of-type(2) {
+    /* deux lignes une pour le titre, une pour la liste */
+    display:grid;
+    grid-template-rows: 0.1fr 1fr;
+    padding: 3rem;
+}
+
+body > main > section:nth-of-type(2) h2{
+    padding: 1rem 2rem;
+    background-color :#0077b6;
+    color: white;
+    text-transform: uppercase;
+    font-size:3rem;
+    max-width:50%;
+}
+
+body > main > section:nth-of-type(2) > ul {
+    list-style: none;
+    display: grid;
+    padding : 0;
+    /* 5 colonnes pour mes livres */
+    grid-template-columns: repeat(5, 1fr);
+    column-gap:1.5rem;
+}
+
+body > main > section:nth-of-type(2) > ul > li > article img{
+    width:100%;
+}
+
+body > main > section:nth-of-type(2) > ul > li > article h3{
+    font-size: 1.5rem;
+    /* je mets au moins le double au cas où mon titre fasse deux lignes */
+    min-height: 3.2rem;
+}
+
+body > main > section:nth-of-type(2) > ul > li > article h4{
+    font-size: 1.2rem;
+    /* je mets au moins le double au cas où mon titre fasse deux lignes */
+    min-height: 3rem;
+    color : #00b4d8;
+}
+
+body > main > section:nth-of-type(2) > ul > li > article figure{
+    margin: 0;
+}
+
+body > main > section:nth-of-type(2) > ul > li > article > footer ul{
+    display:grid;
+    /* je sépare mon footer en deux colonnes pour mes catégories */
+    grid-template-columns: repeat(2, 1fr);
+    column-gap : 1.5rem;
+    list-style:none;
+    padding: 0;
+}
+
+body > main > section:nth-of-type(2) > ul > li > article > footer ul > li{
+    background-color: #90e0ef;
+    padding: 0.5rem 0.75rem;
+}
